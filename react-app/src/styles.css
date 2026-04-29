@@ -21,6 +21,15 @@ nav{ display:flex; gap:12px }
 nav a{ color:var(--text); text-decoration:none; padding:8px 10px; border-radius:8px }
 nav a:hover{ color:var(--accent); background:rgba(13,148,136,0.06) }
 
+/* Header and nav polish */
+.site-header{ display:flex; align-items:center; justify-content:space-between }
+.brand-link{ display:flex; align-items:center; gap:12px; text-decoration:none }
+.brand-logo{ flex-shrink:0 }
+.app-title{ color:var(--text); font-weight:700 }
+.site-nav a{ color:var(--text); transition: all 160ms ease }
+.site-nav a.active{ color:var(--surface); background: linear-gradient(90deg,var(--accent),var(--accent-2)); box-shadow: 0 6px 18px rgba(13,148,136,0.12); padding:8px 12px }
+.site-nav a:focus{ outline:3px solid rgba(13,148,136,0.14); outline-offset:3px }
+
 main{ flex:1 }
 
 .hero{ display:flex; gap:32px; align-items:center; justify-content:space-between; padding:40px 0 }
@@ -31,6 +40,11 @@ main{ flex:1 }
 .btn{ display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:600 }
 .btn.primary{ background:var(--accent); color:white }
 .btn.ghost{ background:transparent; color:var(--accent-2); border:1px solid rgba(0,0,0,0.06) }
+
+/* Subtle motion */
+.hero h2, .card, .btn{ transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms }
+.hero h2:hover{ transform: translateY(-3px) }
+.card:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(15,23,42,0.06) }
 
 .hero-illustration{ opacity:0.95 }
 
