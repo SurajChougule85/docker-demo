@@ -1,2 +1,8 @@
 body { margin: 0; font-family: Inter, system-ui, Arial, sans-serif; }
 .app-root { padding: 24px; }
+
+header { display:flex; align-items:center; justify-content:space-between; gap:16px }
+nav a { margin-right:12px; color: #0366d6; text-decoration:none }
+nav a:hover { text-decoration:underline }
+.page { padding: 12px 0 }
+footer { margin-top:24px; color:#666 }
