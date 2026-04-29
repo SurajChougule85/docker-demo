@@ -1,8 +1,59 @@
 body { margin: 0; font-family: Inter, system-ui, Arial, sans-serif; }
-.app-root { padding: 24px; }
+.app-root { padding: 0; min-height:100vh; display:flex; flex-direction:column }
 
-header { display:flex; align-items:center; justify-content:space-between; gap:16px }
-nav a { margin-right:12px; color: #0366d6; text-decoration:none }
-nav a:hover { text-decoration:underline }
-.page { padding: 12px 0 }
-footer { margin-top:24px; color:#666 }
+:root{
+	--bg: #0f172a;
+	--card: #0b1220;
+	--muted: #94a3b8;
+	--accent: #6366f1;
+	--surface: #0b1220;
+	--white: #ffffff;
+}
+
+body { margin: 0; font-family: Inter, system-ui, Arial, sans-serif; background: linear-gradient(180deg,#071129 0%, #08122a 100%); color:var(--white) }
+
+.container{ max-width:1100px; margin:0 auto; padding:28px }
+
+header{ background:linear-gradient(90deg, rgba(255,255,255,0.03), transparent); padding:16px 0 }
+header .app-title{ font-size:18px; font-weight:700; margin:0 }
+nav{ display:flex; gap:12px }
+nav a{ color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:8px }
+nav a:hover{ color:var(--white); background:rgba(255,255,255,0.03) }
+
+main{ flex:1 }
+
+.hero{ display:flex; gap:32px; align-items:center; justify-content:space-between; padding:40px 0 }
+.hero-content{ max-width:640px }
+.hero h2{ font-size:32px; margin:0 0 12px; color:var(--white) }
+.lead{ color:var(--muted); margin:0 0 18px }
+.cta-row{ display:flex; gap:12px }
+.btn{ display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:600 }
+.btn.primary{ background:var(--accent); color:white }
+.btn.ghost{ background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04) }
+
+.hero-illustration{ opacity:0.95 }
+
+.features{ padding:28px 0 }
+.features h3{ margin-top:0 }
+.cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px }
+.card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.03) }
+.card h4{ margin:0 0 8px }
+
+.section-header{ margin:24px 0 }
+.details ul{ color:var(--muted) }
+.team ol{ color:var(--muted) }
+
+.contact-form{ display:grid; grid-template-columns:1fr 320px; gap:20px; align-items:start }
+.contact-form label{ display:block; color:var(--muted); margin-bottom:8px }
+.contact-form input, .contact-form textarea{ width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:var(--white) }
+.form-actions{ margin-top:8px }
+.contact-meta{ color:var(--muted); padding:12px }
+
+.notfound{ text-align:center; padding:40px 0 }
+
+footer{ padding:20px 0; color:var(--muted); text-align:center }
+
+@media (max-width:760px){
+	.hero{ flex-direction:column; align-items:flex-start }
+	.contact-form{ grid-template-columns:1fr }
+}
