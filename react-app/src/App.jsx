@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Services from './pages/Services'
+import Blog from './pages/Blog'
 import NotFound from './pages/NotFound'
 
 export default function App() {
@@ -23,6 +25,8 @@ export default function App() {
           <nav className="site-nav" aria-label="Main navigation">
             <NavLink to="/" end className={({isActive})=> isActive ? 'active' : undefined}>Home</NavLink>
             <NavLink to="/about" className={({isActive})=> isActive ? 'active' : undefined}>About</NavLink>
+            <NavLink to="/services" className={({isActive})=> isActive ? 'active' : undefined}>Services</NavLink>
+            <NavLink to="/blog" className={({isActive})=> isActive ? 'active' : undefined}>Blog</NavLink>
             <NavLink to="/contact" className={({isActive})=> isActive ? 'active' : undefined}>Contact</NavLink>
           </nav>
         </header>
@@ -31,6 +35,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
